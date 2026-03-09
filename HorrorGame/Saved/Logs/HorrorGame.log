@@ -1742,3 +1742,60 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2026.03.09-13.08.39:466][345]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2868.664307
 [2026.03.09-13.08.40:466][348]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
 [2026.03.09-13.08.40:466][348]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2869.330811, Update Interval: 305.775330
+[2026.03.09-13.13.01:711][591]LogSlate: Window 'Save Level As' being destroyed
+[2026.03.09-13.13.04:894][856]LogUObjectHash: Compacting FUObjectHashTables data took   1.13ms
+[2026.03.09-13.13.07:750][131]LogUObjectHash: Compacting FUObjectHashTables data took   1.03ms
+[2026.03.09-13.13.07:772][131]LogStall: Shutdown...
+[2026.03.09-13.13.07:772][131]LogStall: Shutdown complete.
+[2026.03.09-13.13.07:812][131]LogSlate: Window 'HorrorGame - Unreal Editor' being destroyed
+[2026.03.09-13.13.07:919][131]Cmd: QUIT_EDITOR
+[2026.03.09-13.13.07:919][132]LogCore: Engine exit requested (reason: UUnrealEdEngine::CloseEditor())
+[2026.03.09-13.13.07:922][132]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2026.03.09-13.13.07:924][132]LogStaticMesh: Abandoning remaining async distance field tasks for shutdown
+[2026.03.09-13.13.07:924][132]LogStaticMesh: Abandoning remaining async card representation tasks for shutdown
+[2026.03.09-13.13.07:940][132]LogWorld: UWorld::CleanupWorld for Untitled_1, bSessionEnded=true, bCleanupResources=true
+[2026.03.09-13.13.07:941][132]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.09-13.13.07:941][132]LogWorldPartition: UWorldPartition::Uninitialize : World = /Temp/Untitled_1.Untitled_1
+[2026.03.09-13.13.07:947][132]LogTedsSettings: UTedsSettingsEditorSubsystem::Deinitialize
+[2026.03.09-13.13.07:948][132]LogStylusInput: Shutting down StylusInput subsystem.
+[2026.03.09-13.13.07:949][132]LogLevelSequenceEditor: LevelSequenceEditor subsystem deinitialized.
+[2026.03.09-13.13.07:950][132]LogRuntimeTelemetry: Recording EnginePreExit events
+[2026.03.09-13.13.07:950][132]LogStudioTelemetry: Ended StudioTelemetry Session
+[2026.03.09-13.13.07:970][132]LogAnalytics: Display: [UEEditor.Rocket.Release] AnalyticsET::EndSession
+[2026.03.09-13.13.08:781][132]LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: AudioMixerXAudio2)...
+[2026.03.09-13.13.08:781][132]LogAudio: Display: Destroying 1 Remaining Audio Device(s)...
+[2026.03.09-13.13.08:781][132]LogAudio: Display: Audio Device unregistered from world 'Untitled_1'.
+[2026.03.09-13.13.08:781][132]LogAudio: Display: Shutting down audio device while 1 references to it are still alive. For more information, compile with INSTRUMENT_AUDIODEVICE_HANDLES.
+[2026.03.09-13.13.08:781][132]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1, StreamState=4
+[2026.03.09-13.13.08:785][132]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1, StreamState=2
+[2026.03.09-13.13.08:804][132]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID -1
+[2026.03.09-13.13.08:804][132]LogAudio: Display: Audio Device Manager Shutdown
+[2026.03.09-13.13.08:807][132]LogWindowsTextInputMethodSystem: Activated input method: English (United Kingdom) - (Keyboard).
+[2026.03.09-13.13.08:811][132]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2026.03.09-13.13.08:811][132]LogExit: Preparing to exit.
+[2026.03.09-13.13.08:858][132]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2026.03.09-13.13.09:671][132]LogEditorDataStorage: Deinitializing
+[2026.03.09-13.13.09:761][132]LogDemo: Cleaned up 0 splitscreen connections, owner deletion: enabled
+[2026.03.09-13.13.09:795][132]LogExit: Editor shut down
+[2026.03.09-13.13.09:800][132]LogExit: Transaction tracking system shut down
+[2026.03.09-13.13.09:914][132]LogExit: Object subsystem successfully closed.
+[2026.03.09-13.13.10:009][132]LogShaderCompilers: Display: Shaders left to compile 0
+[2026.03.09-13.13.10:144][132]LogMemoryProfiler: Shutdown
+[2026.03.09-13.13.10:144][132]LogNetworkingProfiler: Shutdown
+[2026.03.09-13.13.10:144][132]LoadingProfiler: Shutdown
+[2026.03.09-13.13.10:144][132]LogTimingProfiler: Shutdown
+[2026.03.09-13.13.10:144][132]LogChaosVDEditor: [FChaosVDExtensionsManager::UnRegisterExtension] UnRegistering CVD Extension [FChaosVDGenericDebugDrawExtension] ...
+[2026.03.09-13.13.10:144][132]LogChaosVDEditor: [FChaosVDExtensionsManager::UnRegisterExtension] UnRegistering CVD Extension [FChaosVDAccelerationStructuresExtension] ...
+[2026.03.09-13.13.10:455][132]LogChaosDD: Chaos Debug Draw Shutdown
+[2026.03.09-13.13.10:488][132]LogHttp: Warning: [FHttpManager::Shutdown] Unbinding delegates for 1 outstanding Http Requests:
+[2026.03.09-13.13.10:488][132]LogHttp: Warning: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B13C00308-49A7-A953-4AD7-919208F74569%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.6.1-44394996%2B%2B%2BUE5%2BRelease-5.6&UserID=45861f1b4645171a07be729b40f32ecb%7C%7C93aa204d-d1da-4132-ad14-2b673aed64d2&AppEnvironment=datacollector-binary&UploadType=eteventstream] refs=[2] status=Processing
+[2026.03.09-13.13.11:034][132]LogEOSShared: FEOSSDKManager::Shutdown EOS_Shutdown Result=[EOS_Success]
+[2026.03.09-13.13.11:034][132]LogNFORDenoise: NFORDenoise function shutting down
+[2026.03.09-13.13.11:034][132]RenderDocPlugin: plugin has been unloaded.
+[2026.03.09-13.13.11:035][132]LogXGEController: Cleaning working directory: C:/Users/25901761/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2026.03.09-13.13.11:038][132]LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetActorFactory id: 0
+[2026.03.09-13.13.11:038][132]LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetSubObjectFactory id: 1
+[2026.03.09-13.13.11:038][132]LogPakFile: Destroying PakPlatformFile
+[2026.03.09-13.13.13:451][132]LogD3D12RHI: ~FD3D12DynamicRHI
+[2026.03.09-13.13.13:674][132]LogExit: Exiting.
+[2026.03.09-13.13.13:702][132]Log file closed, 03/09/26 13:13:13
