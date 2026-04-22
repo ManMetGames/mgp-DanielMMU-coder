@@ -49,6 +49,10 @@ protected:
 	UPROPERTY(EditAnywhere, Category ="Input")
 	class UInputAction* MouseLookAction;
 	
+	/** Flashlight Action*/
+	UPROPERTY (EditAnywhere, Category ="Input")
+	class UInputAction* FlashlightAction;
+
 public:
 	AShedlightCharacter();
 
@@ -59,6 +63,10 @@ protected:
 
 	/** Called from Input Actions for looking input */
 	void LookInput(const FInputActionValue& Value);
+
+	/** Called from Input Actions for flashlight input */
+	void FlashInput(const FInputActionValue& Value);
+
 
 	/** Handles aim inputs from either controls or UI interfaces */
 	UFUNCTION(BlueprintCallable, Category="Input")

@@ -59,6 +59,9 @@ void AShedlightCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 		// Looking/Aiming
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AShedlightCharacter::LookInput);
 		EnhancedInputComponent->BindAction(MouseLookAction, ETriggerEvent::Triggered, this, &AShedlightCharacter::LookInput);
+
+		//Flashlight
+		EnhancedInputComponent->BindAction(FlashlightAction, ETriggerEvent::Started, this, &AShedlightCharacter::FlashInput);
 	}
 	else
 	{
@@ -117,4 +120,9 @@ void AShedlightCharacter::DoJumpEnd()
 {
 	// pass StopJumping to the character
 	StopJumping();
+}
+
+void AShedlightCharacter::FlashInput(const FInputActionValue& Value)
+{
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Flashlight button pressed"));
 }
