@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
-//#include "Components/SpotLightComponent.h"
 #include "ShedlightCharacter.generated.h"
 
 
@@ -14,6 +13,9 @@ class USkeletalMeshComponent;
 class UCameraComponent;
 class UInputAction;
 struct FInputActionValue;
+
+class USpotLightComponent;
+
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
@@ -55,8 +57,8 @@ protected:
 	UPROPERTY (EditAnywhere, Category ="Input")
 	class UInputAction* FlashlightAction;
 
-	//UPROPERTY(EditAnywhere, Category = "Torch")
-	//USkyLightComponent* Spotlight;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Torch")
+	USpotLightComponent* SpotLight;
 	
 
 public:
