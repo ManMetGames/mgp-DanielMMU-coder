@@ -49,7 +49,7 @@ AShedlightCharacter::AShedlightCharacter()
 	SpotLight->SetupAttachment(GetFirstPersonCameraComponent());
 
 	SpotLight->SetRelativeLocationAndRotation(FVector(30.0f, 17.5f, -5.0f), FRotator(-18.6f, -1.3f, 5.26f));
-	SpotLight->Intensity = 0.5;
+	SpotLight->Intensity = 0.9;
 	SpotLight->SetIntensityUnits(ELightUnits::Lumens);
 	SpotLight->AttenuationRadius = 1050.0f;
 	SpotLight->InnerConeAngle = 18.7f;
@@ -73,7 +73,7 @@ void AShedlightCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 		EnhancedInputComponent->BindAction(MouseLookAction, ETriggerEvent::Triggered, this, &AShedlightCharacter::LookInput);
 
 		//Flashlight
-		EnhancedInputComponent->BindAction(FlashlightAction, ETriggerEvent::Started, this, &AShedlightCharacter::FlashInput);
+		//EnhancedInputComponent->BindAction(FlashlightAction, ETriggerEvent::Started, this, &AShedlightCharacter::FlashInput);
 		EnhancedInputComponent->BindAction(FlashlightAction, ETriggerEvent::Completed, this, &AShedlightCharacter::FlashInput);
 	}
 	else
@@ -137,6 +137,11 @@ void AShedlightCharacter::DoJumpEnd()
 
 void AShedlightCharacter::FlashInput(const FInputActionValue& Value)
 {
-	SpotLight->Intensity = 0.0;
+	if (SpotLight->Intensity == 0.9) {
+		SpotLight->Intensity = 0;
+	}
+	else {
+		SpotLight->Intensity = 0.9;
+	}
 	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Flashlight button pressed"));
 }
