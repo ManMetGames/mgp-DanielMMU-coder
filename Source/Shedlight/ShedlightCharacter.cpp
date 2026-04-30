@@ -137,11 +137,13 @@ void AShedlightCharacter::DoJumpEnd()
 
 void AShedlightCharacter::FlashInput(const FInputActionValue& Value)
 {
-	if (SpotLight->Intensity == 0.9) {
-		SpotLight->Intensity = 0;
+	if (SpotLight->IsVisible()) 
+	{
+		SpotLight->SetVisibility(false);
 	}
-	else {
-		SpotLight->Intensity = 0.9;
+	else 
+	{
+		SpotLight->SetVisibility(true);
 	}
 	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Flashlight button pressed"));
 }
