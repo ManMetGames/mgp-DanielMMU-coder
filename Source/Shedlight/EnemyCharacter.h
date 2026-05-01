@@ -6,10 +6,16 @@
 #include "GameFramework/Character.h"
 #include "EnemyCharacter.generated.h"
 
+
+class UVHealthComponent;
+
 UCLASS()
 class SHEDLIGHT_API AEnemyCharacter : public ACharacter
 {
 	GENERATED_BODY()
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Default, meta = (AllowPrivateAccess = "true"))
+	UVHealthComponent* HealthComponent;
 
 public:
 	// Sets default values for this character's properties

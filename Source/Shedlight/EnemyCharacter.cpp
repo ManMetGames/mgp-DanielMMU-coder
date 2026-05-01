@@ -2,6 +2,7 @@
 
 
 #include "EnemyCharacter.h"
+#include "VHealthComponent.h"
 
 // Sets default values
 AEnemyCharacter::AEnemyCharacter()
