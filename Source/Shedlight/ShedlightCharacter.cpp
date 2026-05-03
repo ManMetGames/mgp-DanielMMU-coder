@@ -49,7 +49,7 @@ AShedlightCharacter::AShedlightCharacter()
 	SpotLight->SetupAttachment(GetFirstPersonCameraComponent());
 
 	SpotLight->SetRelativeLocationAndRotation(FVector(30.0f, 17.5f, -5.0f), FRotator(-18.6f, -1.3f, 5.26f));
-	SpotLight->Intensity = 0.9;
+	SpotLight->Intensity = 2;
 	SpotLight->SetIntensityUnits(ELightUnits::Lumens);
 	SpotLight->AttenuationRadius = 1050.0f;
 	SpotLight->InnerConeAngle = 18.7f;
@@ -145,5 +145,4 @@ void AShedlightCharacter::FlashInput(const FInputActionValue& Value)
 	{
 		SpotLight->SetVisibility(true);
 	}
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Flashlight button pressed"));
 }
