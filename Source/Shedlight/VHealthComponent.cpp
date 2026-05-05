@@ -34,7 +34,7 @@ float UVHealthComponent::GetMaxHealth() const
 
 void UVHealthComponent::UpdateHealth(float DeltaHealth)
 {
-	DeltaHealth = -1;
+	DeltaHealth = -20;
 	Health += DeltaHealth;
 	//Clamp the health to avoid values less than 0 and bigger than MaxHealth
 	Health = FMath::Clamp(Health, 0.0f, MaxHealth);
@@ -44,6 +44,8 @@ void UVHealthComponent::UpdateHealth(float DeltaHealth)
 	if (Health == 0.0f)
 	{
 		OnHealthDepleted.Broadcast();
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Enemy is dead"));
+
 	}
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("Health: %f"), Health));
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("Enemy Health: %f"), Health));
 }
